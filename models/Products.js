@@ -14,7 +14,7 @@ class Products {
     // "price": 29,
     // "image": "./img/bag.png",
     // "alt": "bag product"
-    const { name, price, image, alt } = data;
+    const { id, name, price, image, alt } = data;
     //creating elements
     // const cardElement = document.createElement("div");
     // const cardImage = document.createElement("img");
@@ -38,14 +38,15 @@ class Products {
     // this.parent.appendChild(cardElement);
 
     const card = document.createElement("div");
-    card.innerHTML = ` <img src=${image} alt=${alt}>
-        <div>
-            <h3>${name}</h3>
-            <div>
-                <span>${price}</span>
-                <button>+</button>
+    card.innerHTML = ` <img src=${image} alt=${alt} id="product-image">
+        <div id="product-info">
+            <h3 id="product-name">${name}</h3>
+            <div id="control">
+                <span id="product-price">${price} $</span>
+                <button data-id=${id}>+</button>
             </div>
         </div>`;
+    card.id = "card";
     this.parent.append(card);
   }
 }
