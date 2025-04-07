@@ -2,6 +2,7 @@ class Products {
   constructor(parent, products) {
     this.parent = parent;
     this.products = products;
+    this.parent.addEventListener("click", this);
   }
 
   showProducts() {
@@ -48,6 +49,19 @@ class Products {
         </div>`;
     card.id = "card";
     this.parent.append(card);
+  }
+
+  handleEvent() {
+    const element = event.target;
+    // console.log(event.target.tagName);
+    if (element.tagName === "BUTTON") {
+      //all caps
+      this.addToCart(element.dataset.id); //access class methods by calling this
+    }
+  }
+
+  addToCart(id) {
+    console.log(id);
   }
 }
 
