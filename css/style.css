@@ -80,11 +80,40 @@ main {
   color: white;
 }
 
-/* <div> <img src="./img/bag.png" alt="bag" product="">
-        <div>
-            <h3>Bag</h3>
-            <div>
-                <span>29</span>
-                <button data-id="1">+</button>
-            </div>
-        </div></div> */
+#cart{
+  width: 450px;
+}
+
+h2{
+  background-color: var(--color-primary);
+  border-radius: 20px;
+  width: 300px;
+  height: 60px;
+  /* text-align: center; */
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#total-price{
+  border:1px grey solid;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  height:50px;
+  padding: 20px;
+}
+
+
+#total-price span{
+  color: var(--color-primary);
+}
+
+#cart-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:20px 0px;
+  font-weight: bold;
+}
